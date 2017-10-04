@@ -1,0 +1,18 @@
+{
+  "name": "test_cases",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "wdio"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "imap": "^0.8.19",
+    "wdio-mocha-framework": "^0.5.11",
+    "wdio-selenium-standalone-service": "0.0.9",
+    "webdriverio": "^4.8.0"
+  }
+}
