@@ -3,7 +3,7 @@ var Imap = require('imap'),
 
 var imap = new Imap({
   user: 'pythonflaskweb@yahoo.com',
-  password: '******',
+  password: '123456news360',
   host: 'imap.mail.yahoo.com',
   port: 993,
   tls: true
