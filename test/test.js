@@ -100,26 +100,26 @@ describe('Extract the link and click to reset new password', function(){
 });
 
 
-  // it('should open a new tab to view the email', function () {
-  //   browser.url('https://login.yahoo.com/');
-  //   browser.setValue('input[name="username"]', 'pythonflaskweb');
-  //   browser.click('input[type="submit"]');
-  //   browser.waitForExist('input[name="password"]');
-  //   browser.setValue('input[name="password"]', '19921201lwr');
-  //   browser.waitForEnabled('#login-signin');
-  //   browser.click('#login-signin');
-  //   //browser.debug();
-  //   browser.waitForEnabled('div#mega-bottombar');
-  //   browser.click('#mega-bottombar-mail');
-  //   // browser.waitUntil(function () {
-  //   //   return browser.getUrl()=="https://mg.mail.yahoo.com/?.src=neo&reason=bkt_myc";
-  //   // }, 10000, 'expected text to be different after 5s');
-  //   //browser.waitForExist('div#masterNav', 20000);
-  //   //browser.waitForEnabled('span[title="News360 Password Assistance"]');
-  //   //browser.click('span[title="News360 Password Assistance"]');
-  //   browser.waitForEnabled("#yui_3_16_0_ym19_1_1507754530017_6240");
-  //   browser.click("#yui_3_16_0_ym19_1_1507754530017_6240");
-  // });
+  it('should open a new tab to view the email', function () {
+    browser.url('https://login.yahoo.com/');
+    browser.setValue('input[name="username"]', 'pythonflaskweb');
+    browser.click('input[type="submit"]');
+    browser.waitForExist('input[name="password"]');
+    browser.setValue('input[name="password"]', '19921201lwr');
+    browser.waitForEnabled('#login-signin');
+    browser.click('#login-signin');
+    //browser.debug();
+    browser.waitForEnabled('div#mega-bottombar');
+    browser.click('#mega-bottombar-mail');
+    // browser.waitUntil(function () {
+    //   return browser.getUrl()=="https://mg.mail.yahoo.com/?.src=neo&reason=bkt_myc";
+    // }, 10000, 'expected text to be different after 5s');
+    //browser.waitForExist('div#masterNav', 20000);
+    //browser.waitForEnabled('span[title="News360 Password Assistance"]');
+    //browser.click('span[title="News360 Password Assistance"]');
+    browser.waitForEnabled("#yui_3_16_0_ym19_1_1507754530017_6240");
+    browser.click("#yui_3_16_0_ym19_1_1507754530017_6240");
+  });
 
 
 
