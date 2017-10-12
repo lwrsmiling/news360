@@ -27,5 +27,5 @@ For the "forgot password", "reset password" and "login using new password" part
 2. I also tried to login the mailbox in browsers and include this part into the automation tests.
    - I can successfully login my mailbox by clicking the corresponding buttons automatically.
    - After logining to mailbox, the DOM is a very big tree. To find the element contains the link to the "password reset" email, it took a long time.
-   - However, I haven't figured out a way to locate the email.
+   - However, I haven't figured out a way to locate the email. I should try to add more "wait" functions.
    
