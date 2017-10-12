@@ -11,7 +11,7 @@
 2. Input "npm test" in terminal and the tests will run automatically
 
 ## What I have done
-The test file "login.js" is located under the "test" folder. And I finished the automation tests of:
+The test file "test.js" is located under the "test" folder. And I finished the automation tests of:
 1. "Sign in successfully using correct credentials" and "Fail to sign in with wrong credentials"
 2. "Forgot password"
 
