@@ -22,7 +22,7 @@ For the "forgot password", "reset password" and "login using new password" part
    - I used the APIs provided by node-imap and saved it as "email.js". The email body is also downloaded and saved as "msg-body.txt".
    - At the end of each line of "msg-body.txt", an equal sign "=" was added. I think this is because of the IMAP service. And I also found the "password reset" link was separated into two lines.
    - Therefore I wrote a second function which included a regular expression to extract the link from msg-body.txt. It's saved in "extract_link.js".
-   - However, I fail to import those two functions into the automation tests.
+   - However, when I tried to import those two functions into the automation tests, it contained asynchronous requests. A promise should be implemented.
    
 2. I also tried to login the mailbox in browsers and include this part into the automation tests.
    - I can successfully login my mailbox by clicking the corresponding buttons automatically.
