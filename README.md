@@ -19,10 +19,9 @@ The test file "login.js" is located under the "test" folder. And I finished the 
 For the "forgot password", "reset password" and "login using new password" part
 1. I have tried to use [node-imap](https://github.com/mscdex/node-imap) to authorize in the mail. 
    - This [node-imap](https://github.com/mscdex/node-imap) module allows you to sign in your mailbox, search the corresponding email and download the body of the email as html file.
-   - I used the APIs provided by node-imap and saved it as "email.js". The email body is also downloaded and saved as "msg-body.html".
-   - At the end of each line of "msg-body.html", an equal sign "=" was added. I think this is because of the IMAP service. And I also found the "password reset"
-   link was separated into two lines.
-   - Therefore I wrote a second function which included two regular expressions to extract the two parts of the link from msg-body.html. It's saved in "extractlink.js".
+   - I used the APIs provided by node-imap and saved it as "email.js". The email body is also downloaded and saved as "msg-body.txt".
+   - At the end of each line of "msg-body.txt", an equal sign "=" was added. I think this is because of the IMAP service. And I also found the "password reset" link was separated into two lines.
+   - Therefore I wrote a second function which included a regular expression to extract the link from msg-body.txt. It's saved in "extract_link.js".
    - However, I fail to import those two functions into the automation tests.
    
 2. I also tried to login the mailbox in browsers and include this part into the automation tests.
