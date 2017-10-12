@@ -9,7 +9,7 @@ describe('Sign in test', function(){
   });
   beforeEach(function(){
     browser.url('https://news360.com/intro');
-    browser.waitForEnabled('button=or use your email');
+    browser.waitForVisible('button=or use your email');
     browser.click('button=or use your email');
     browser.click('a=Sign in to News360');
   });
@@ -18,6 +18,9 @@ describe('Sign in test', function(){
     browser.setValue('input[type="email"]', 'pythonflaskweb@yahoo.com');
     browser.setValue('input[type="password"]', '56789news360');
     browser.click('button.modal-button');
+    browser.waitForExist('a.topbar-button');
+    var text = browser.getText('a.topbar-button')[1];
+    assert.equal(text, "SAVED");
     browser.waitForExist('a.topbar-avatar');
     browser.click('a.topbar-avatar');
     browser.waitForExist('a=Sign out');
@@ -28,6 +31,8 @@ describe('Sign in test', function(){
     browser.setValue('input[type="password"]', '123456');
     browser.click('button*=Sign in');
     browser.waitForExist('p.request-error');
+    var text = browser.getText('p.request-error');
+    assert.equal(text, "Wrong email and/or password");
   });
 });
 
@@ -37,14 +42,14 @@ describe('Send reset password link to your email account', function(){
         width: 1500,
         height: 800
     });
-    browser.url('https://news360.com/intro');
-    browser.waitForEnabled('button=or use your email');
-    browser.click('button=or use your email');
-    browser.click('a=Sign in to News360');
   });
 
   it('should let you reset a new password', function(){
-    browser.waitForEnabled('a=Forgot password?');
+    browser.url('https://news360.com/intro');
+    browser.waitForVisible('button=or use your email');
+    browser.click('button=or use your email');
+    browser.click('a=Sign in to News360');
+    browser.waitForVisible('a=Forgot password?');
     browser.click('a=Forgot password?');
     browser.setValue('input[type="email"]', 'pythonflaskweb@yahoo.com');
     browser.click('button[type="submit"]');
