@@ -18,7 +18,7 @@ The test file "test.js" is located under the "test" folder. And I finished the a
 ## What I have tried to finish
 For the "forgot password", "reset password" and "login using new password" part
 1. I have tried to use [node-imap](https://github.com/mscdex/node-imap) to authorize in the mail. 
-   - This [node-imap](https://github.com/mscdex/node-imap) module allows you to sign in your mailbox, search the corresponding email and download the body of the email as html file.
+   - This [node-imap](https://github.com/mscdex/node-imap) module allows you to sign in your mailbox, search the corresponding email and download the body of the email as txt file.
    - I used the APIs provided by node-imap and saved it as "email.js". The email body is also downloaded and saved as "msg-body.txt".
    - At the end of each line of "msg-body.txt", an equal sign "=" was added. I think this is because of the IMAP service. And I also found the "password reset" link was separated into two lines.
    - Therefore I wrote a second function which included a regular expression to extract the link from msg-body.txt. It's saved in "extract_link.js".
